@@ -10,41 +10,45 @@
         <script src="./Assets/js/script.js" type="text/javascript" async></script>
     </head>
     <body>
-      <header id ="header"> 
-        <div class="container">
-          <nav class="navbar">
-            <input type="checkbox" id="check">
-            <label for="check"class="checkbtn">
-              <i class="fas fa-bars"> Menu</i>
-            </label>
-            <a class="logo" href="#" title="Khoa's page logo">
-              <img class="logo-img" src="./Assets/img/logo.png">
-            </a>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a href="#" class="active">Giới thiệu</a>
-              </li>
-
-              <li class="nav-item">  
-                <a href="#">Thông Tin</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#">Liên Hệ</a>
-              </li>
-            </ul>
-          </nav>
+      <div id="page">
+        <header id ="header"> 
+          <div class="container">
+            <nav class="navbar">
+              <input type="checkbox" id="check">
+              <label for="check"class="checkbtn" id="MenuButton">
+                <!-- <i class="fas fa-bars"> Menu</i> -->
+                <div class="checkbtn-burger"></div>
+              </label>
+              <a class="logo" href="#" title="Khoa's page logo">
+                <img class="logo-img" src="./Assets/img/logo.png">
+              </a>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="#" class="active">Giới thiệu</a>
+                </li>
+  
+                <li class="nav-item">  
+                  <a href="#">Thông Tin</a>
+                </li>
+  
+                <li class="nav-item">
+                  <a href="#">Liên Hệ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="content">
+          <section id ="intro">
+            Intro
+          </section>
+          <section id="resume">
+            Resume
+          </section>
+          <section id="contact">
+            Contact
+          </section>
         </div>
-      </header>
-      <section id ="intro">
-        Intro
-      </section>
-      <section id="resume">
-        Resume
-      </section>
-      <section id="contact">
-        Contact
-      </section>
-
+      </div>
     </body>
 </html>
