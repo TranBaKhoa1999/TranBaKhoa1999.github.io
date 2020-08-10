@@ -1,6 +1,6 @@
 window.addEventListener("scroll",function(){
     var header= document.getElementById("header");
-    header.classList.toggle("sticky",window.scrollY>200);
+    header.classList.toggle("sticky",window.scrollY>0);
 });
 //animation and event menu button
 const menuBtn = document.querySelector('.checkbtn');
@@ -12,15 +12,19 @@ menuBtn.addEventListener('click',()=>{
     if(!menuOpen){
         menuBtn.classList.add('open');
         menuOpen=true;
-        content.style.width='50%';
-        header.style.width='50%';
+        // content.style.width='50%';
+        // header.style.width='50%';
         nav.style.right='0';
+        header.style.left='-50%';
+        content.style.left='-50%';
     }
     else{
         menuBtn.classList.remove('open');
         menuOpen=false;
-        content.style.width='100%';
-        header.style.width='100%';
+        // content.style.width='100%';
+        // header.style.width='100%';
+        header.style.left='0';
+        content.style.left='0';
         nav.style.right='-100%';
     }
 });
@@ -32,8 +36,10 @@ function myFunction(x) {
         menuOpen=false;
         nav.style.right='-100%';
         menuBtn.classList.remove('open');
-        content.style.width='100%';
-        header.style.width='100%';
+        // content.style.width='100%';
+        // header.style.width='100%';
+        header.style.left='0';
+        content.style.left='0';
     }
   }
   
