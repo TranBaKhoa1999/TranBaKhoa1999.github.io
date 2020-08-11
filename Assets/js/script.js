@@ -1,9 +1,9 @@
 window.addEventListener("scroll",function(){
     var header= document.getElementById("header");
-    header.classList.toggle("sticky",window.scrollY>0);
+    header.classList.toggle("sticky",window.scrollY>400);
 });
 //animation and event menu button
-const menuBtn = document.querySelector('.checkbtn');
+var menuBtn = document.querySelector('.checkbtn');
 const content =document.querySelector('#page');
 var header= document.getElementById("header");
 var nav = document.querySelector('.navbar-nav');
@@ -46,3 +46,4 @@ function myFunction(x) {
   var x = window.matchMedia("(max-width: 805px)")
   myFunction(x) // Call listener function at run time
   x.addListener(myFunction) // Attach listener function on state changes
+  // jquery
