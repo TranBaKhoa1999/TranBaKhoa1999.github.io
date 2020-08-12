@@ -24,7 +24,6 @@ body{
 	padding: 10px 0;
 	transition: all 0.3s ease-in-out;
 	z-index: 10;
-	background-color: green;
 }
 .container{
 	margin: 0 5em 0 2em;
@@ -35,8 +34,7 @@ body{
 	float: left;
 }
 .logo-img{
-	width: 50%;
-	/* height: 50%; */
+	width: 10vh;
 	padding: 0;
 	vertical-align: top;
 }
@@ -45,7 +43,7 @@ body{
 }
 .navbar-nav{
 	float:right;
-	margin:1em auto;
+	margin:0.7em auto;
 	height: 100%;
 }
 .nav-item{
@@ -168,12 +166,14 @@ section{
 	transform: rotate(45deg) translate(-35px,35px);
 }
 @media (max-width: 805px){
+	.logo{
+		float: left;
+	}
 	.logo-img{
 		width: 4em;
 		height: 4em;
-		float: left;
+		/* float: left; */
 	}
-
 	.container{
 		margin-left: 0.5em;
 		margin-right: 1em;
@@ -185,7 +185,7 @@ section{
 		position: fixed;
 		margin:0;
 		width: 50%;
-		height: 50%;
+		height: 100%;
 		background:#666666;
 		right: -100%;
 		top:0;

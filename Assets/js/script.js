@@ -1,6 +1,6 @@
 window.addEventListener("scroll",function(){
     var header= document.getElementById("header");
-    header.classList.toggle("sticky",window.scrollY>400);
+    header.classList.toggle("sticky",window.scrollY>100);
 });
 //animation and event menu button
 var menuBtn = document.querySelector('.checkbtn');
