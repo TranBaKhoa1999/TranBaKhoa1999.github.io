@@ -1,69 +1,84 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	text-decoration: none;
 }
+
 img {
 	max-width: 100%;
 }
-#page{
+
+#page {
 	height: 200%;
 	width: 100%;
 	transition: all 0.3s ease-in-out;
 	position: relative;
 
 }
-body{
+
+body {
 	background-color: #666666;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-#header{
+
+#header {
 	position: fixed;
 	width: 100%;
 	padding: 10px 0;
 	transition: all 0.3s ease-in-out;
 	z-index: 10;
 }
-.container{
+
+.container {
 	margin: 0 5em 0 2em;
 }
-.logo{
+
+.logo {
 	padding: 0;
 	margin: 0;
 	/* float: left; */
 }
-.logo-img{
+
+.logo-img {
 	width: 10vh;
 	padding: 0;
 	vertical-align: top;
 }
-.navbar{
+
+.navbar {
 	width: 100%;
 }
-.navbar-nav{
-	float:right;
-	margin:0.7em auto;
+
+.navbar-nav {
+	float: right;
+	margin: 0.7em auto;
 	height: 100%;
 }
-.nav-item{
+
+.nav-item {
 	display: inline-block;
 	margin: 0 1em;
 	line-height: 7vh;
 }
-.nav-item a{
+
+.nav-item a {
 	color: white;
 	font-size: 3vh;
 	padding: 7px 13px;
 	border-radius: 3px;
 }
-.nav-item a.active{
+
+.nav-item a.active {
 	background: #cca353;
 }
-.nav-item a:hover{
-	color:goldenrod;
+
+.nav-item a:hover {
+	color: goldenrod;
+	font-weight: normal;
 }
-.checkbtn{
+
+.checkbtn {
 	padding: 20px 0px;
 	width: 4em;
 	float: right;
@@ -73,20 +88,24 @@ body{
 	margin: 10px auto;
 	justify-content: center;
 	align-items: center;
-	transition:all  0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 	position: relative;
 }
-#MenuButton:hover{
-	background-color:transparent;
+
+#MenuButton:hover {
+	background-color: transparent;
 }
-.checkbtn-burger{
+
+.checkbtn-burger {
 	background-color: white;
 	width: 20px;
 	height: 0.5vw;
 	border-radius: 5px;
 	transition: all .3s ease-in-out;
 }
-.checkbtn-burger::before,.checkbtn-burger::after{
+
+.checkbtn-burger::before,
+.checkbtn-burger::after {
 	content: '';
 	position: absolute;
 	width: 20px;
@@ -95,134 +114,204 @@ body{
 	border-radius: 5px;
 	transition: all .3s ease-in-out;
 }
-.checkbtn-burger::before{
+
+.checkbtn-burger::before {
 	transform: translateY(-16px);
 }
-.checkbtn-burger::after{
+
+.checkbtn-burger::after {
 	transform: translateY(16px);
 }
-#check{
+
+#check {
 	display: none;
 	padding: 0;
 }
-section{
+
+section {
 	padding-bottom: 100vh;
 	text-align: center;
-	overflow: hidden;
 }
-#intro{
+[type=radio] {
+	display: none;
+  }
+  
+
+/* Intro section  */
+#intro {
+	height: 35vw;
+	position: relative;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+
+#intro label{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	width: 80%;
+	height: 90%;
+}
+#s2:checked~#slide1,#s1:checked~#slide3,#s3:checked~#slide2{
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+	transform: translate3d(-15%,0,-100px);
+	transition:0.5s ease-out;
+}
+#s2:checked~#slide3,#s1:checked~#slide2,#s3:checked~#slide1{
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+	transform: translate3d(15%,0,-100px);
+	transition:0.5s ease-out;
+}
+
+#s1:checked ~ #slide1,#s2:checked~ #slide2,
+#s3:checked~#slide3{
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+	transform: translate3d(0,0,0);
+	transition:0.3s ease-in;
+}
+#intro div,
+#resume div {
+	color: white;
+}
+
+[type=radio] {
+	display: none;
+}
+
+/* resume section */
+#resume {
 	background: url(../img/hinh2.jpg) repeat scroll #4b4d4c;
 	background-size: 100% 165%;
 	background-attachment: center;
 	overflow: hidden;
-	/* position: relative; */
 	mix-blend-mode: multiply;
 	z-index: 1;
 }
-#intro div{
-	z-index: 2;
-}
-#intro div {
-	color:white;
-}
-#resume{
-	background-color: brown;
-}
-#contact{
+
+/* contact section */
+#contact {
 	background-color: chartreuse;
 }
-#header.sticky{
+
+
+#header.sticky {
 	padding: 0;
 	background-color: #ffffff;
 }
-#header.sticky .nav-item a{
-	color:black;
+
+#header.sticky .nav-item a {
+	color: black;
 }
-#header.sticky .nav-item a:hover{
-	font-weight:bolder;
+
+#header.sticky .nav-item a:hover {
+	font-weight: bolder;
 }
-#header.sticky .logo-img{
+
+#header.sticky .logo-img {
 	transition: all 0.3s;
 	content: url(../img/logowhite.png);
 }
-#header.sticky .checkbtn{
+
+#header.sticky .checkbtn {
 	border-color: black;
 }
-#header.sticky .checkbtn-burger,#header.sticky .checkbtn-burger::before,#header.sticky .checkbtn-burger::after{
+
+#header.sticky .checkbtn-burger,
+#header.sticky .checkbtn-burger::before,
+#header.sticky .checkbtn-burger::after {
 	background-color: black;
 }
-.checkbtn.open .checkbtn-burger{
+
+.checkbtn.open .checkbtn-burger {
 	transform: translateX(50px);
 	background-color: transparent;
 }
-#header.sticky .checkbtn.open .checkbtn-burger{
+
+#header.sticky .checkbtn.open .checkbtn-burger {
 	transform: translateX(50px);
 	background-color: transparent;
 }
-.checkbtn.open .checkbtn-burger::before{
-	transform: rotate(-45deg) translate(-35px,-35px);
+
+.checkbtn.open .checkbtn-burger::before {
+	transform: rotate(-45deg) translate(-35px, -35px);
 }
-.checkbtn.open .checkbtn-burger::after{
-	transform: rotate(45deg) translate(-35px,35px);
+
+.checkbtn.open .checkbtn-burger::after {
+	transform: rotate(45deg) translate(-35px, 35px);
 }
-@media (max-width: 805px){
-	.logo{
+
+@media (max-width: 805px) {
+	.logo {
 		float: left;
 	}
-	.logo-img{
+
+	.logo-img {
 		width: 4em;
 		height: 4em;
 		/* float: left; */
 	}
-	.container{
+
+	.container {
 		margin-left: 0.5em;
 		margin-right: 1em;
 	}
-	.checkbtn{
+
+	.checkbtn {
 		display: flex;
 	}
-	.navbar-nav{
+
+	.navbar-nav {
 		position: fixed;
-		margin:0;
+		margin: 0;
 		width: 50%;
 		height: 100%;
-		background:#666666;
+		background: #666666;
 		right: -100%;
-		top:0;
+		top: 0;
 		transition: all 0.3s ease-in-out;
 		text-align: center;
 		align-items: center;
 		justify-content: center;
 		opacity: 1s;
 	}
-	.nav-item{
+
+	.nav-item {
 		display: block;
 	}
-	.nav-item{
+
+	.nav-item {
 		margin: 0;
-		padding:2em 0;
+		padding: 2em 0;
 	}
-	.nav-item a{
+
+	.nav-item a {
 		margin: 0;
 		padding: 5% 25%;
 		display: inline-block;
 		font-size: 4vw;
 		opacity: 5s;
 	}
-	.nav-item a:hover{
+
+	.nav-item a:hover {
 		background: grey;
 		color: brown;
 	}
-	.nav-item a.active{
-		background:#cca353;
+
+	.nav-item a.active {
+		background: #cca353;
 		color: brown;
 	}
-	.checkbtn:hover{
+
+	.checkbtn:hover {
 		background-color: #999999;
 	}
 }
-@media (max-width: 300px){
-	.logo-img{
+
+@media (max-width: 300px) {
+	.logo-img {
 		display: none;
 		transition: 0.6s ease-in-out;
 	}
