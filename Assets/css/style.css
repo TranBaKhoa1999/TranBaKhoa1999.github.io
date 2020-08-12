@@ -31,7 +31,7 @@ body{
 .logo{
 	padding: 0;
 	margin: 0;
-	float: left;
+	/* float: left; */
 }
 .logo-img{
 	width: 10vh;
@@ -193,6 +193,7 @@ section{
 		text-align: center;
 		align-items: center;
 		justify-content: center;
+		opacity: 1s;
 	}
 	.nav-item{
 		display: block;
@@ -206,6 +207,7 @@ section{
 		padding: 5% 25%;
 		display: inline-block;
 		font-size: 4vw;
+		opacity: 5s;
 	}
 	.nav-item a:hover{
 		background: grey;
