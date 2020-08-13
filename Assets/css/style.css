@@ -16,10 +16,13 @@ img {
 	position: relative;
 
 }
-
+#page{
+	background: url(../img/bguni.png) repeat;
+	background-size: 200%;
+}
 body {
 	background-color: #666666;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Patrick Hand', cursive;
 }
 
 #header {
@@ -129,52 +132,82 @@ body {
 }
 
 section {
-	padding-bottom: 100vh;
+	padding-bottom: 2vh;
 	text-align: center;
 }
+
 [type=radio] {
 	display: none;
-  }
-  
+}
+
 
 /* Intro section  */
 #intro {
-	height: 35vw;
+	height: 90vh;
 	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
 }
 
-#intro label{
+#intro label {
 	position: absolute;
 	margin: auto;
 	left: 0;
 	right: 0;
-	top:0;
+	top: 0;
 	bottom: 0;
 	width: 80%;
 	height: 90%;
 }
-#s2:checked~#slide1,#s1:checked~#slide3,#s3:checked~#slide2{
-	box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
-	transform: translate3d(-15%,0,-100px);
-	transition:0.5s ease-out;
-}
-#s2:checked~#slide3,#s1:checked~#slide2,#s3:checked~#slide1{
-	box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
-	transform: translate3d(15%,0,-100px);
-	transition:0.5s ease-out;
+
+#intro label img {
+	/* -webkit-filter: grayscale(100%); 
+  filter: grayscale(50%); */
 }
 
-#s1:checked ~ #slide1,#s2:checked~ #slide2,
-#s3:checked~#slide3{
-	box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
-	transform: translate3d(0,0,0);
-	transition:0.3s ease-in;
+#s2:checked~#slide1,
+#s1:checked~#slide3,
+#s3:checked~#slide2 {
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+	transform: translate3d(-15%, 0, -100px);
+	transition: 0.5s ease-out;
 }
+
+#s2:checked~#slide3,
+#s1:checked~#slide2,
+#s3:checked~#slide1 {
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+	transform: translate3d(15%, 0, -100px);
+	transition: 0.5s ease-out;
+}
+
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3 {
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+	transform: translate3d(0, 0, 0);
+	transition: 0.3s ease-in;
+}
+
 #intro div,
-#resume div {
+#resume div,#contact div,#footer div{
 	color: white;
+}
+#slide2 .wellcome-text{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: calc(90vh/2 - 20%);
+	height: 10%;
+}
+#slide2 .wellcome-text marquee{
+	color: white;
+	font-size: 5vh;
+	/* font-weight: bold; */
+	font-weight:1000;
+	/* font-family: 'Dancing Script', cursive; */
+	font-family: 'Patrick Hand', cursive;
+	text-transform: uppercase;
 }
 
 [type=radio] {
@@ -183,20 +216,23 @@ section {
 
 /* resume section */
 #resume {
-	background: url(../img/hinh2.jpg) repeat scroll #4b4d4c;
-	background-size: 100% 165%;
+	background: url(../img/hinh2.jpg) no-repeat scroll;
+	background-size: 100% 140%;
 	background-attachment: center;
 	overflow: hidden;
-	mix-blend-mode: multiply;
-	z-index: 1;
+	height: 100vh;
+	
 }
 
 /* contact section */
-#contact {
-	background-color: chartreuse;
+#contact{
+	height: 90vh;
 }
-
-
+/* footer section*/
+#footer{
+	height: 50vh;
+}
+/* end */
 #header.sticky {
 	padding: 0;
 	background-color: #ffffff;
