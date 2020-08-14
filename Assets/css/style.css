@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	text-decoration: none;
+	cursor: url(../img/cursor2.png),auto;
 }
 
 img {
@@ -16,10 +17,12 @@ img {
 	position: relative;
 
 }
-#page{
+
+#page {
 	background: url(../img/bguni.png) repeat;
 	background-size: 200%;
 }
+
 body {
 	background-color: #666666;
 	font-family: 'Patrick Hand', cursive;
@@ -86,7 +89,6 @@ body {
 	width: 4em;
 	float: right;
 	border-radius: 3px;
-	cursor: pointer;
 	display: none;
 	margin: 10px auto;
 	justify-content: center;
@@ -143,7 +145,7 @@ section {
 
 /* Intro section  */
 #intro {
-	height: 90vh;
+	height: 40vw;
 	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
@@ -156,20 +158,18 @@ section {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	width: 80%;
+	width: 40%;
 	height: 90%;
+	/* background-color: rebeccapurple; */
+	border-radius: 100%;
 }
 
-#intro label img {
-	/* -webkit-filter: grayscale(100%); 
-  filter: grayscale(50%); */
-}
 
 #s2:checked~#slide1,
 #s1:checked~#slide3,
 #s3:checked~#slide2 {
 	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
-	transform: translate3d(-15%, 0, -100px);
+	transform: translate3d(-75%, 0, -100px);
 	transition: 0.5s ease-out;
 }
 
@@ -177,7 +177,7 @@ section {
 #s1:checked~#slide2,
 #s3:checked~#slide1 {
 	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
-	transform: translate3d(15%, 0, -100px);
+	transform: translate3d(75%, 0, -100px);
 	transition: 0.5s ease-out;
 }
 
@@ -190,22 +190,25 @@ section {
 }
 
 #intro div,
-#resume div,#contact div,#footer div{
+#resume div,
+#contact div,
+#footer div {
 	color: white;
 }
-#slide2 .wellcome-text{
+
+#slide2 .wellcome-text {
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: calc(90vh/2 - 20%);
 	height: 10%;
 }
-#slide2 .wellcome-text marquee{
+
+#slide2 .wellcome-text marquee {
 	color: white;
 	font-size: 5vh;
 	/* font-weight: bold; */
-	font-weight:1000;
-	/* font-family: 'Dancing Script', cursive; */
+	font-weight: 1000;
 	font-family: 'Patrick Hand', cursive;
 	text-transform: uppercase;
 }
@@ -216,22 +219,24 @@ section {
 
 /* resume section */
 #resume {
-	background: url(../img/hinh2.jpg) no-repeat scroll;
+	/* background: url(../img/hinh2.jpg) no-repeat scroll;
 	background-size: 100% 140%;
 	background-attachment: center;
-	overflow: hidden;
+	overflow: hidden; */
 	height: 100vh;
-	
+
 }
 
 /* contact section */
-#contact{
+#contact {
 	height: 90vh;
 }
+
 /* footer section*/
-#footer{
+#footer {
 	height: 50vh;
 }
+
 /* end */
 #header.sticky {
 	padding: 0;
@@ -287,7 +292,6 @@ section {
 	.logo-img {
 		width: 4em;
 		height: 4em;
-		/* float: left; */
 	}
 
 	.container {
@@ -344,6 +348,10 @@ section {
 	.checkbtn:hover {
 		background-color: #999999;
 	}
+
+	#intro {}
+
+	#intro label {}
 }
 
 @media (max-width: 300px) {
