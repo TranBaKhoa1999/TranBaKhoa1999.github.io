@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	text-decoration: none;
-	cursor: url(../img/cursor2.png),auto;
+	cursor: url(../img/cursor2.png), auto;
 }
 
 img {
@@ -163,7 +163,7 @@ section {
 	height: 90%;
 	/* background-color: rebeccapurple; */
 	border-radius: 100%;
-	margin-top:7vw;
+	margin-top: 7vw;
 }
 
 #s2:checked~#slide1,
@@ -193,25 +193,10 @@ section {
 #intro div,
 #resume div,
 #contact div,
-#footer div {
+#footer div,
+#about div {
 	color: white;
 }
-
-/* #slide2 .wellcome-text {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: calc(90vh/2 - 20%);
-	height: 10%;
-} */
-
-/* #slide2 .wellcome-text marquee {
-	color: white;
-	font-size: 5vh;
-	font-weight: 1000;
-	font-family: 'Patrick Hand', cursive;
-	text-transform: uppercase;
-} */
 
 [type=radio] {
 	display: none;
@@ -226,13 +211,15 @@ section {
 	height: 100vh;
 	position: relative;
 }
-#resume .main-content{
+
+#resume .main-content {
 	position: absolute;
 	height: 100%;
 	left: 0;
 	right: 0;
 }
-#resume .main-content .table{
+
+#resume .main-content .table {
 	height: 90%;
 	position: absolute;
 	left: 0;
@@ -241,23 +228,46 @@ section {
 	margin: 20px 5%;
 	border-radius: 2%;
 }
+.resume_avatar{
+	background-color: indigo;
+	height: 20%;
+	position: relative;
+	padding: 5% 0;
+}
 .avatar {
 	vertical-align: middle;
-	width: 10vw;
-	height:10vw;
+	width: 50%;
+	height: 100%;
 	border-radius: 50%;
+	background-color:black;
+}
+.table-left{
+	background: red;
 	float: left;
-	margin: 20px 20px;
-  }
-
+	height: 100%;
+	width: 20%;
+	position: relative;
+}
+.resume_detail{
+	/* float: left; */
+	width: 100%;
+	height: calc(100% - 20%);
+	background-color: greenyellow;
+}
+/* end resume section */
+/* about section */
+#about {
+	height: 90vh;
+}
+/* end about section */
 /* contact section */
 #contact {
 	height: 90vh;
 }
-
+/* end contact section */
 /* footer section*/
 #footer {
-	height: 50vh;
+	height: 30vh;
 }
 
 /* end */
@@ -309,16 +319,18 @@ section {
 
 @media (max-width: 805px) {
 	.logo {
-		float: left;
+		/* float: left; */
 	}
 
 	.logo-img {
 		width: 4em;
 		height: 4em;
 	}
-	.avatar{
+
+	.avatar {
 		float: none;
 	}
+
 	.container {
 		margin-left: 0.5em;
 		margin-right: 1em;
@@ -382,10 +394,7 @@ section {
 	#intro label {
 		margin-top: 10%;
 	}
-	.avatar{
-		height: 15vw;
-		width: 15vw;
-	}
+
 }
 
 @media (max-width: 300px) {
