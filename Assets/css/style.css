@@ -149,6 +149,7 @@ section {
 	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
+	margin-bottom: 3vw;
 }
 
 #intro label {
@@ -162,8 +163,8 @@ section {
 	height: 90%;
 	/* background-color: rebeccapurple; */
 	border-radius: 100%;
+	margin-top:7vw;
 }
-
 
 #s2:checked~#slide1,
 #s1:checked~#slide3,
@@ -196,22 +197,21 @@ section {
 	color: white;
 }
 
-#slide2 .wellcome-text {
+/* #slide2 .wellcome-text {
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: calc(90vh/2 - 20%);
 	height: 10%;
-}
+} */
 
-#slide2 .wellcome-text marquee {
+/* #slide2 .wellcome-text marquee {
 	color: white;
 	font-size: 5vh;
-	/* font-weight: bold; */
 	font-weight: 1000;
 	font-family: 'Patrick Hand', cursive;
 	text-transform: uppercase;
-}
+} */
 
 [type=radio] {
 	display: none;
@@ -224,8 +224,31 @@ section {
 	background-attachment: center;
 	overflow: hidden; */
 	height: 100vh;
-
+	position: relative;
 }
+#resume .main-content{
+	position: absolute;
+	height: 100%;
+	left: 0;
+	right: 0;
+}
+#resume .main-content .table{
+	height: 90%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: wheat;
+	margin: 20px 5%;
+	border-radius: 2%;
+}
+.avatar {
+	vertical-align: middle;
+	width: 10vw;
+	height:10vw;
+	border-radius: 50%;
+	float: left;
+	margin: 20px 20px;
+  }
 
 /* contact section */
 #contact {
@@ -293,7 +316,9 @@ section {
 		width: 4em;
 		height: 4em;
 	}
-
+	.avatar{
+		float: none;
+	}
 	.container {
 		margin-left: 0.5em;
 		margin-right: 1em;
@@ -349,9 +374,18 @@ section {
 		background-color: #999999;
 	}
 
-	#intro {}
+	#intro {
+		margin-bottom: 10%;
+		/* height: 70vw; */
+	}
 
-	#intro label {}
+	#intro label {
+		margin-top: 10%;
+	}
+	.avatar{
+		height: 15vw;
+		width: 15vw;
+	}
 }
 
 @media (max-width: 300px) {
