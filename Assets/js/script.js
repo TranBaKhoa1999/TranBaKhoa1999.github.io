@@ -1,7 +1,18 @@
 window.addEventListener("scroll", function () {
     var header = document.getElementById("header");
-    header.classList.toggle("sticky", window.scrollY > 100);
+    var aboutBtn = document.getElementById("nav-about");
+    var contactBtn = document.getElementById("nav-contact");
+    var resumeBtn = document.getElementById("nav-resume");
+
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    var header_togglePos = 30 * (vw/100);
+    header.classList.toggle("sticky", window.scrollY > (header_togglePos));
 });
+
+function moveAbout() {
+
+}
 //animation and event menu button
 var menuBtn = document.querySelector('.checkbtn');
 const content = document.querySelector('#page');

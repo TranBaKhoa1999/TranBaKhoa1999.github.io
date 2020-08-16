@@ -11,8 +11,10 @@
   <script src="./Assets/js/script.js" type="text/javascript" async></script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
   <div id="page">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
     <header id="header">
       <div class="container">
         <nav class="navbar">
@@ -26,15 +28,17 @@
           </a>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="#" class="active">Resume</a>
+              <a type="button" id="nav-intro" href="#intro" class="nav-link">Universe</a>
+            </li>
+            <li class="nav-item">
+              <a type="button" id="nav-about" href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a type="button" id="nav-resume" href="#resume" class="nav-link">Resume</a>
             </li>
 
             <li class="nav-item">
-              <a href="#">About</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#">Contact</a>
+              <a type="button" id="nav-contact" href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
         </nav>
@@ -82,7 +86,7 @@
                   <ul>
                     <li>
                       <div class="icon"></div>
-                      <div class="data">16 street, Thao Dien, District 2 <br/>Ho Cho Minh City</div>
+                      <div class="data">16 street, Thao Dien, District 2 <br />Ho Cho Minh City</div>
                     </li>
                   </ul>
                 </div>
@@ -108,7 +112,8 @@
     </div>
   </div>
   <script src="./Assets/js/jquery-3.5.1.js"></script>
-  <script src="./Assets/js/scroll_image.js" type="text/javascript" async></script>
+  <script src="./Assets/js/scroll_Jquery.js" type="text/javascript" async></script>
+  <script src="./Assets/js/bootstrap-4.5.2.min.js" async></script>
 </body>
 
 </html>
