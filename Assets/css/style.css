@@ -337,6 +337,13 @@ section {
 	width: 20%;
 	position: relative;
 }
+.table-right {
+	background: red;
+	float: left;
+	height: 100%;
+	width: 80%;
+	position: relative;
+}
 
 .resume_detail {
 	/* float: left; */
