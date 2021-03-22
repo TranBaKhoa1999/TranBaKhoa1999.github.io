@@ -1,3 +1,4 @@
+
 window.addEventListener("scroll", function () {
     var header = document.getElementById("header");
     var aboutBtn = document.getElementById("nav-about");
@@ -13,6 +14,7 @@ window.addEventListener("scroll", function () {
 function moveAbout() {
 
 }
+
 //animation and event menu button
 var menuBtn = document.querySelector('.checkbtn');
 const content = document.querySelector('#page');
