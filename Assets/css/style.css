@@ -220,7 +220,7 @@ body {
 }
 
 section {
-	padding-bottom: 2vh;
+	/* padding-bottom: 2vh; */
 	text-align: center;
 }
 
@@ -367,7 +367,7 @@ section {
 /* end contact section */
 /* footer section*/
 #footer {
-	height: 30vh;
+	/* height: 30vh; */
 }
 
 /* end */
